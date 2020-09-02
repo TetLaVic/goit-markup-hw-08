@@ -1,0 +1,30 @@
+.contact-us {
+	display: flex;
+	margin-left: auto;
+
+	& li:not(:last-child) {
+		margin-right: 30px;
+	}
+
+	& a:hover,
+	& a:focus {
+		color: $accent-color;
+	}
+
+	& .mobile-link,
+	& .email-link {
+		color: $title-color;
+
+		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	}
+}
+
+.icon-mobile,
+.icon-email {
+	fill: currentColor;
+}
+
+.email-link:hover .icon-mobile,
+.mobile-link:hover .icon-email {
+	fill: $accent-color;
+}
