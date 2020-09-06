@@ -6,6 +6,7 @@ html {
 *::before,
 *::after {
 	box-sizing: inherit;
+	outline: 2px solid tomato;
 }
 
 body {
@@ -24,6 +25,12 @@ h3,
 p {
 	margin-top: 0;
 	margin-bottom: 0;
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: auto;
 }
 
 .list {

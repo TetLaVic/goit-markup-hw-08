@@ -13,13 +13,13 @@
 		<link rel="stylesheet" href="./css/main.min.css" />
 	</head>
 	<body>
-		<header class="page-header">
-			<div class="container content">
+		<header class="page-header ">
+			<div class="page-header-content container">
 				<a class="logo link" lang="en" href="./">
 					<span class="web">Web</span>
 					<span class="studio">Studio</span>
 				</a>
-				<nav>
+				<!-- <nav>
 					<ul class="site-nav list">
 						<li class="nav-item"><a href="./index.html" class="link current">Студия</a></li>
 						<li class="nav-item"><a href="./portfolio.html" class="link">Портфолио</a></li>
@@ -44,7 +44,7 @@
 							+38 096 111 11 11
 						</a>
 					</li>
-				</ul>
+				</ul> -->
 			</div>
 		</header>
 		<main>
@@ -111,7 +111,7 @@
 				</div>
 			</section>
 			<!--What we develop-->
-			<section class="section padding-bottom">
+			<!-- <section class="section padding-bottom">
 				<div class="container">
 					<h2 class="section-title">Чем мы занимаемся</h2>
 					<ul class="list work">
@@ -135,7 +135,7 @@
 						</li>
 					</ul>
 				</div>
-			</section>
+			</section> -->
 			<!--Our team-->
 			<section class="section section-padding bcg-color">
 				<div class="container ">
@@ -143,7 +143,23 @@
 
 					<ul class="list team">
 						<li class="team-item">
-							<img src="./images/product-designer.jpg" width="270" height="260" alt="Игорь Демьяненко" />
+							<picture>
+								<source
+									srcset="./images/desktop/product-designer.jpg 1x, ./images/desktop/product-designer@2x.jpg 2x"
+									media="(min-width: 1200px)"
+								/>
+
+								<source
+									srcset="./images/tablet/product-designer.jpg 1x, ./images/tablet/product-designer@2x.jpg 2x"
+									media="(min-width: 768px)"
+								/>
+
+								<source
+									srcset="./images/mobile/product-designer.jpg 1x, ./images/mobile/product-designer@2x.jpg 2x"
+									media="(max-width: 767px)"
+								/>
+								<img src="./images/desktop/product-designer.jpg" alt="Игорь Демьяненко" />
+							</picture>
 							<h3 class="team-member">Игорь Демьяненко</h3>
 							<p lang="en" class="team-pos">Product Designer</p>
 							<ul class="team-media list">
@@ -202,7 +218,24 @@
 							</ul>
 						</li>
 						<li class="team-item">
-							<img src="./images/frontend-developer.jpg" width="270" height="260" alt="Ольга Репина" />
+							<picture>
+								<source
+									srcset="./images/desktop/frontend-developer.jpg 1x, ./images/desktop/frontend-developer@2x.jpg 2x"
+									media="(min-width: 1200px)"
+								/>
+
+								<source
+									srcset="./images/tablet/frontend-developer.jpg 1x, ./images/tablet/frontend-developer@2x.jpg 2x"
+									media="(min-width: 768px)"
+								/>
+
+								<source
+									srcset="./images/mobile/frontend-developer.jpg 1x, ./images/mobile/frontend-developer@2x.jpg 2x"
+									media="(max-width: 767px)"
+								/>
+								<img src="./images/desktop/frontend-developer.jpg" alt="Ольга Репина" />
+							</picture>
+
 							<h3 class="team-member">Ольга Репина</h3>
 							<p lang="en" class="team-pos">Frontend Developer</p>
 							<ul class="team-media list">
@@ -261,7 +294,24 @@
 							</ul>
 						</li>
 						<li class="team-item">
-							<img src="./images/marketing.jpg" width="270" height="260" alt="Николай Тарасов" />
+							<picture>
+								<source
+									srcset="./images/desktop/marketing.jpg 1x, ./images/desktop/marketing@2x.jpg 2x"
+									media="(min-width: 1200px)"
+								/>
+
+								<source
+									srcset="./images/tablet/marketing.jpg 1x, ./images/tablet/marketing@2x.jpg 2x"
+									media="(min-width: 768px)"
+								/>
+
+								<source
+									srcset="./images/mobile/marketing.jpg 1x, ./images/mobile/marketing@2x.jpg 2x"
+									media="(max-width: 767px)"
+								/>
+								<img src="./images/desktop/marketing.jpg" alt="Николай Тарасов" />
+							</picture>
+
 							<h3 class="team-member">Николай Тарасов</h3>
 							<p lang="en" class="team-pos">Marketing</p>
 							<ul class="team-media list">
@@ -320,7 +370,24 @@
 							</ul>
 						</li>
 						<li class="team-item">
-							<img src="./images/ui-designer.jpg" width="270" height="260" alt="Михаил Ермаков" />
+							<picture>
+								<source
+									srcset="./images/desktop/ui-designer.jpg 1x, ./images/desktop/ui-designer@2x.jpg 2x"
+									media="(min-width: 1200px)"
+								/>
+
+								<source
+									srcset="./images/tablet/ui-designer.jpg 1x, ./images/tablet/ui-designer@2x.jpg 2x"
+									media="(min-width: 768px)"
+								/>
+
+								<source
+									srcset="./images/mobile/ui-designer.jpg 1x, ./images/mobile/ui-designer@2x.jpg 2x"
+									media="(max-width: 767px)"
+								/>
+								<img src="./images/desktop/ui-designer.jpg" alt="Михаил Ермаков" />
+							</picture>
+
 							<h3 class="team-member">Михаил Ермаков</h3>
 							<p lang="en" class="team-pos">UI Designer</p>
 							<ul class="team-media list">
@@ -507,22 +574,19 @@
 						</li>
 					</ul>
 				</div>
-				<form class="subscription">
-					<div>
-						<p class="call">Подпишитесь на рассылку</p>
-						<div class="footer-form">
-							<div class="user-email">
-								<input type="email" name="user-email" id="user-email" placeholder="E-mail" />
-							</div>
-							<div class="btn-submit">
-								<button class="button" type="submit">
-									Подписаться
-									<svg class="send-svg" width="24" height="24">
-										<use href="./images/sprite.svg#icon-send"></use>
-									</svg>
-								</button>
-							</div>
-						</div>
+				<form class="footer-form">
+					<p class="call">Подпишитесь на рассылку</p>
+
+					<div class="user-email">
+						<input type="email" name="user-email" id="user-email" placeholder="E-mail" />
+					</div>
+					<div class="subscribe">
+						<button class="button btn-submit" type="submit">
+							Подписаться
+							<svg class="send-svg" width="24" height="24">
+								<use href="./images/sprite.svg#icon-send"></use>
+							</svg>
+						</button>
 					</div>
 				</form>
 			</div>

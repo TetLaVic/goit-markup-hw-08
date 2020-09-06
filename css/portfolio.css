@@ -346,7 +346,7 @@ template {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
-  src: local(""), url("../fonts/raleway-v17-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/raleway-v17-latin_cyrillic-700.woff") format("woff");
+  src: local(""), url("../fonts/raleway-v17-latin-700.woff2") format("woff2"), url("../fonts/raleway-v17-latin-700.woff") format("woff");
 }
 
 /* roboto-regular - latin_cyrillic */
@@ -391,6 +391,7 @@ html {
 *::after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+  outline: 2px solid tomato;
 }
 
 body {
@@ -407,6 +408,12 @@ h3,
 p {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .list {
@@ -432,11 +439,10 @@ p {
 }
 
 .logo {
-  margin-right: 85px;
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.167;
   color: #2196f3;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -459,11 +465,29 @@ p {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .page-header {
@@ -472,7 +496,7 @@ p {
   border-bottom-color: #ececec;
 }
 
-.page-header .content {
+.page-header-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -561,17 +585,17 @@ p {
 }
 
 .section-title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.179;
   text-align: center;
   color: #212121;
 }
 
 .section-padding {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .button {
@@ -654,7 +678,7 @@ p {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
-  margin-right: 30px;
+  text-align: center;
 }
 
 .contacts-item:not(:last-child) {
@@ -781,6 +805,10 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -789,12 +817,12 @@ p {
 .footer-logo {
   display: inline-block;
   margin-bottom: 20px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .footer-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  width: 100%;
 }
 
 .footer .link {
@@ -803,10 +831,12 @@ p {
 
 .call {
   margin-bottom: 20px;
+  margin-top: 60px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .media-list {
@@ -815,20 +845,18 @@ p {
   display: flex;
 }
 
-.subscription {
-  margin-left: auto;
-}
-
 .user-email > input {
-  width: 358px;
+  width: 100%;
   padding: 15px 16px;
+  margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   background: #2f303a;
-  margin-right: 12px;
 }
 
 .send-svg {
+  display: inline-block;
+  vertical-align: middle;
   margin-left: 10px;
 }
 /*# sourceMappingURL=portfolio.css.map */

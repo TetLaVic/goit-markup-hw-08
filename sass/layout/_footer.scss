@@ -7,16 +7,20 @@
 
 	&-content {
 		display: flex;
+		flex-direction: column;
 		align-items: center;
 	}
 
 	&-logo {
 		display: inline-block;
 		margin-bottom: 20px;
+		margin-right: auto;
+		margin-left: auto;
 	}
 
 	&-form {
-		display: flex;
+		// display: block;
+		width: 100%;
 	}
 
 	.link {
@@ -26,33 +30,40 @@
 
 .call {
 	margin-bottom: 20px;
+	margin-top: 60px;
 
 	font-weight: 700;
 	font-size: 14px;
 	line-height: 1.14;
 	text-transform: uppercase;
+	text-align: center;
 }
 
 .media-list {
 	display: flex;
 }
 
-.subscription {
-	margin-left: auto;
-}
+// .subscribe {
+// 	text-align: center;
+// }
 
 .user-email > input {
-	width: 358px;
+	// display: block;
+	width: 100%;
 	padding: 15px 16px;
+	// margin-top: 20px;
+	margin-bottom: 20px;
 
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	border-radius: 4px;
 
 	background: #2f303a;
 
-	margin-right: 12px;
+	// margin-right: 12px;
 }
 
 .send-svg {
+	display: inline-block;
+	vertical-align: middle;
 	margin-left: 10px;
 }
