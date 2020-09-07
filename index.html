@@ -9,7 +9,7 @@
 			href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
 			rel="stylesheet"
 		/> -->
-		<link rel="stylesheet" href="./sass/base/_normalize.scss" />
+		<!-- <link rel="stylesheet" href="./sass/base/_normalize.scss" /> -->
 		<link rel="stylesheet" href="./css/main.min.css" />
 	</head>
 	<body>
@@ -19,15 +19,27 @@
 					<span class="web">Web</span>
 					<span class="studio">Studio</span>
 				</a>
-				<!-- <nav>
-					<ul class="site-nav list">
+				<nav>
+					<button type="button" class="btn-menu is-open" data-menu-button>
+						<svg
+							class="btn-menu-svg"
+							height="40"
+							width="40"
+							aria-label="Переключатель мобильного меню"
+							aria-expanded="false"
+						>
+							<use class="icon-menu-sandwich" href="./images/sprite.svg#icon-menu-sandwich"></use>
+							<use class="icon-menu-cross" href="./images/sprite.svg#icon-menu-cross"></use>
+						</svg>
+					</button>
+					<!-- <ul class="site-nav list">
 						<li class="nav-item"><a href="./index.html" class="link current">Студия</a></li>
 						<li class="nav-item"><a href="./portfolio.html" class="link">Портфолио</a></li>
 						<li class="nav-item"><a href="" class="link">Контакты</a></li>
-					</ul>
+					</ul> -->
 				</nav>
 
-				<ul class="list contact-us">
+				<!-- <ul class="list contact-us">
 					<li>
 						<a class="link email-link" href="mailto:info@devstudio.com">
 							<svg class="icon-email" width="16" height="12">
@@ -111,31 +123,49 @@
 				</div>
 			</section>
 			<!--What we develop-->
-			<!-- <section class="section padding-bottom">
+			<section class="section padding-bottom section-work">
 				<div class="container">
 					<h2 class="section-title">Чем мы занимаемся</h2>
 					<ul class="list work">
 						<li class="work-item">
 							<div class="work-card">
-								<img src="./images/desktop.jpg" width="370" height="294" alt="десктопные приложения" />
+								<img
+									srcset="./images/desktop/desktop.jpg 1x, ./images/desktop/desktop@2x.jpg 2x"
+									src="./images/desktop/desktop.jpg"
+									width="370"
+									height="294"
+									alt="десктопные приложения"
+								/>
 								<h3 class="work-example">Десктопные приложения</h3>
 							</div>
 						</li>
 						<li class="work-item">
 							<div class="work-card">
-								<img src="./images/mobile.jpg" width="370" height="294" alt="мобильные приложения" />
+								<img
+									srcset="./images/desktop/mobile.jpg 1x, ./images/desktop/mobile@2x.jpg 2x"
+									src="./images/desktop/mobile.jpg"
+									width="370"
+									height="294"
+									alt="мобильные приложения"
+								/>
 								<h3 class="work-example">Мобильные приложения</h3>
 							</div>
 						</li>
 						<li class="work-item">
 							<div class="work-card">
-								<img src="./images/designer-solutions.jpg" width="370" height="294" alt="дизайнерские решения" />
+								<img
+									srcset="./images/desktop/designer-solutions.jpg 1x, ./images/desktop/designer-solutions@2x.jpg 2x"
+									src="./images/desktop/designer-solutions.jpg"
+									width="370"
+									height="294"
+									alt="дизайнерские решения"
+								/>
 								<h3 class="work-example">Дизайнерские решения</h3>
 							</div>
 						</li>
 					</ul>
 				</div>
-			</section> -->
+			</section>
 			<!--Our team-->
 			<section class="section section-padding bcg-color">
 				<div class="container ">
@@ -647,6 +677,7 @@
 				</form>
 			</div>
 		</div>
+		<script src="./js/menu.js"></script>
 		<script src="./js/modal.js"></script>
 	</body>
 </html>

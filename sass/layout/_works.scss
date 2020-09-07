@@ -1,3 +1,9 @@
+@media screen and (max-width: $desktop) {
+	.section-work {
+		display: none;
+	}
+}
+
 .work {
 	@include wrapFlex();
 
@@ -32,8 +38,4 @@
 
 .work-card {
 	position: relative;
-
-	& img {
-		display: block;
-	}
 }
