@@ -1,28 +1,32 @@
 .clients-list {
-	@include wrapFlex();
+	display: flex;
+	flex-wrap: wrap;
 	margin-bottom: -30px;
 }
 
 .client {
-	display: flex;
-	flex-basis: calc((100% - 30px) / 2);
-
 	height: 90px;
+	max-width: 100%;
+	margin-bottom: 30px;
+	// margin-right: 30px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: calc((100% - 30px) / 2);
+
+	@include for-size(tablet-landscape) {
+		width: calc((100% - 30px * 2) / 3);
+	}
+
+	@include for-size(desktop) {
+		width: calc((100% - 30px * 5) / 6);
+	}
 
 	border: 1px solid $color-svg;
 	border-radius: 4px;
-
-	justify-content: center;
-	align-items: center;
-	margin-bottom: 30px;
-
 	transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-	&-svg {
-		fill: $color-svg;
-
-		transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-	}
 
 	&:hover,
 	&:focus {
@@ -33,7 +37,30 @@
 	&:focus .client-svg {
 		fill: $accent-color;
 	}
+
 	&:not(:nth-child(2n)) {
 		margin-right: 30px;
+	}
+
+	@include for-size(tablet-landscape) {
+		&:not(:nth-child(3n)) {
+			margin-right: 30px;
+		}
+
+		&:nth-child(3n) {
+			margin-right: 0px;
+		}
+	}
+
+	@include for-size(desktop) {
+		&:not(:last-child) {
+			margin-right: 30px;
+		}
+	}
+
+	&-svg {
+		fill: $color-svg;
+
+		transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	}
 }

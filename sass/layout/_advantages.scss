@@ -1,5 +1,8 @@
 .advantage {
-	// @include wrapFlex(flex);
+	@media screen and (min-width: $tablet) {
+		display: flex;
+		flex-wrap: wrap;
+	}
 
 	&-title {
 		font-weight: 700;
@@ -28,18 +31,45 @@
 		width: 100%;
 		height: 120px;
 		justify-content: center;
+		align-items: center;
 	}
 
 	&-item {
-		width: 100%;
-		// width: calc((100% - 30px * 3) / 4);
-	}
+		margin-bottom: 30px;
 
-	// &-item:not(:nth-child(4n)) {
-	// 	margin-right: 30px;
-	// }
+		@include for-size(tablet-portrait) {
+			width: 100%;
+		}
 
-	&-svg {
-		margin: auto;
+		@include for-size(tablet-landscape) {
+			flex-basis: calc((100% - 30px) / 2);
+		}
+
+		@include for-size(desktop) {
+			flex-basis: calc((100% - 30px * 3) / 4);
+		}
+
+		@include for-size(tablet-portrait) {
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+		}
+
+		@include for-size(tablet-landscape) {
+			&:not(:nth-child(2n)) {
+				margin-right: 30px;
+			}
+		}
+
+		@include for-size(desktop) {
+			&:not(:nth-child(4n)) {
+				margin-right: 30px;
+			}
+		}
+
+		// &-svg {
+		// 	justify-content: center;
+		// 	align-items: center;
+		// }
 	}
 }

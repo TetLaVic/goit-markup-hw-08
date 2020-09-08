@@ -18,7 +18,7 @@
 		}
 
 		@include for-size(tablet-landscape) {
-			width: calc((100% - 30px) / 2);
+			flex-basis: calc((100% - 30px) / 2);
 		}
 
 		@include for-size(tablet-landscape) {
@@ -28,7 +28,7 @@
 		}
 
 		@include for-size(desktop) {
-			width: calc((100% - 30px * 3) / 4);
+			flex-basis: calc((100% - 30px * 3) / 4);
 		}
 
 		@include for-size(desktop) {

@@ -1,5 +1,10 @@
 .site-nav {
-	display: flex;
+	display: none;
+
+	@include for-size(tablet-landscape) {
+		display: flex;
+		margin-left: 88px;
+	}
 
 	font-weight: 500;
 	font-size: 14px;

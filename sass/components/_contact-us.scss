@@ -1,9 +1,36 @@
 .contact-us {
-	display: flex;
+	display: none;
+
+	@include for-size(tablet-landscape) {
+		display: block;
+	}
+
+	@include for-size(desktop) {
+		display: flex;
+	}
+
 	margin-left: auto;
 
+	font-family: Roboto, sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 1.167;
+	text-align: left;
+
+	@include for-size(desktop) {
+		font-size: 14px;
+		line-height: 1.71;
+	}
+
 	& li:not(:last-child) {
-		margin-right: 30px;
+		@media screen and (max-width: $desktop) {
+			margin-bottom: 10px;
+		}
+
+		@media screen and (min-width: $desktop) {
+			margin-right: 30px;
+		}
 	}
 
 	& a:hover,
