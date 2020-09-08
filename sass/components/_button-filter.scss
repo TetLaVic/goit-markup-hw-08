@@ -1,10 +1,19 @@
 .filter-list {
 	display: flex;
+	flex-wrap: wrap;
 	margin-bottom: 50px;
-	justify-content: center;
 
-	&-item:not(:last-child) {
+	@media screen and (max-width: $tablet) {
+		justify-content: left;
 		margin-right: 8px;
+	}
+
+	@media screen and (min-width: $tablet) {
+		justify-content: center;
+
+		&-item:not(:last-child) {
+			margin-right: 8px;
+		}
 	}
 }
 
