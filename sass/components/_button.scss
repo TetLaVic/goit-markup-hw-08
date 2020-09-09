@@ -49,34 +49,32 @@
 }
 
 .btn-menu {
+	@media screen and (min-width: $tablet) {
+		display: none;
+	}
+
 	display: inline-flex;
 	margin: 0;
 	padding: 0;
 	border: none;
 	background-color: transparent;
 
-	@media screen and (min-width: $tablet) {
+	.icon-menu-cross {
 		display: none;
 	}
 
-	&-svg {
-		fill: currentColor;
+	&.is-open .icon-menu-cross {
+		display: block;
 	}
 
-	// .icon-menu-cross {
-	// 	// display: none;
-	// 	fill: $title-color;
-	// }
+	&.is-open .icon-menu-sandwich {
+		display: none;
+	}
 
-	// .icon-menu-sandwich {
-	// 	fill: $title-color;
-	// }
-
-	// &.is-open .icon-menu-cross {
-	// 	display: block;
-	// }
-
-	// &.is-open .icon-menu-sandwich {
-	// 	display: none;
-	// }
+	&:hover .icon-menu-cross,
+	&:focus .icon-menu-cross,
+	&:hover .icon-menu-sandwich,
+	&:focus .icon-menu-sandwich {
+		fill: $accent-color;
+	}
 }
